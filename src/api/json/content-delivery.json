@@ -1,0 +1,27 @@
+{
+  "title": "Sa'MegoBro предоставляет возможность заказать грузинские блюда от нашего шеф-повара с доставкой на дом с помощью сервиса наших партнёров, а так же Вы можете сделать заказ по телефону и забрать заказ из ресторана со скидкой 5%",
+  "details": "Подробности стоимости и времени доставки или самовывоза можно уточнить у менеджера по телефону.",
+  "buttons": [
+    {
+      "id": 0,
+      "title": "+7-(383)-311-04-24",
+      "target": "",
+      "href": "tel:+7-383-311-04-24",
+      "isShow": true
+    },
+    {
+      "id": 1,
+      "title": "Яндекс еда",
+      "target": "_blank",
+      "href": "https://eda.yandex.ru/novosibirsk/r/megobari",
+      "isShow": false
+    },
+    {
+      "id": 2,
+      "title": "Delivery club",
+      "target": "_blank",
+      "href": "https://www.delivery-club.ru/srv/MEGOBARI_nsk",
+      "isShow": true
+    }
+  ]
+}

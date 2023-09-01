@@ -1,0 +1,29 @@
+{
+  "timetable": "Сегодня работаем:",
+  "from": "c",
+  "to": "до",
+  "lunch": "Ланч 11:30-17:00",
+  "social-network-website": [
+    {
+      "id": 0,
+      "name": "flamp",
+      "url": "https://novosibirsk.flamp.ru/firm/sa_megobro_restoran_kafe-70000001040265022",
+      "logo": "/image/snw/flamp.png",
+      "apiRating": ""
+    },
+    {
+      "id": 1,
+      "name": "Яндекс Карты",
+      "url": "https://yandex.ru/maps/org/megobari/198770147175",
+      "logo": "/image/snw/yandex.png",
+      "apiRating": ""
+    },
+    {
+      "id": 2,
+      "name": "Google Карты",
+      "url": "https://www.google.com/maps/place/MEGOBARI/@55.035443,82.9204003,17z/data=!4m8!1m2!3m1!2sMEGOBARI!3m4!1s0x42dfe50cb1206c6b:0x29a671ce3eece635!8m2!3d55.035443!4d82.922589",
+      "logo": "/image/snw/google.png",
+      "apiRating": ""
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+body {
+  height: 100%;
+  width: 100%;
+  --min-size-img: 110px;
+  --max-size-img: 200px;
+}
+
+#__nuxt {
+  height: 100vh;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  transition-delay: 200ms;
+  animation: delayShow 200ms normal forwards step-end;
+}
+
+.flip-list-move {
+  transition: transform 1s;
+}
+
+@keyframes delayShow {
+  0% {
+    position: absolute;
+  }
+  100% {
+    position: static;
+  }
+}
+.slide-fade-enter-active {
+  transition: all .9s ease;
+}
+.slide-fade-leave-active {
+  transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter-from, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .3s;
+}
+.page-enter-from, .page-leave-active {
+  opacity: 0;
+}
+
+.home-enter-active, .home-leave-active {
+  transition: opacity .4s;
+}
+.home-enter-from, .home-leave-active {
+  opacity: 0;
+}
+
+.animation-fade {
+  opacity: 0;
+  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+.animation-slide {
+  opacity: 0;
+  transform: translateX(-15px);
+  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: .4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
