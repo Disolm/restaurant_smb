@@ -1,33 +1,32 @@
-#FROM node:18.16.0 as builder
-FROM node:18.16.0 as builder
+ARG NODE_VERSION=18.16.0
 
-WORKDIR /app
+FROM node:${NODE_VERSION}-slim as base
+
+ARG PORT=3000
+
+ENV NODE_ENV=production
+
+WORKDIR /src
+
+# Build
+FROM base as build
+
+COPY package.json .
+COPY package-lock.json .
+RUN npm install --production=false
 
 COPY . .
 
-RUN npm install \
-  --prefer-offline \
-  --frozen-lockfile \
-  --non-interactive \
-  --production=false
-
 RUN npm run build
+RUN npm prune
 
-RUN rm -rf node_modules && \
-  NODE_ENV=production npm install \
-  --prefer-offline \
-  --pure-lockfile \
-  --non-interactive \
-  --production=true
+# Run
+FROM base
 
-#FROM node:18.16.0
-FROM node:18.16.0
+ENV PORT=$PORT
 
-WORKDIR /app
+COPY --from=build /src/.output /src/.output
+# Optional, only needed if you rely on unbundled dependencies
+# COPY --from=build /src/node_modules /src/node_modules
 
-COPY --from=builder /app  .
-
-ENV HOST 0.0.0.0
-EXPOSE 3000
-
-CMD ["npm", "run", "start"]
+CMD [ "node", ".output/server/index.mjs" ]

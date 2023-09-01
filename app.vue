@@ -11,16 +11,16 @@
 import TheHeader from '@/components/TheHeader.vue'
 import TheFooter from '@/components/TheFooter'
 import telegram_data from '/src/api/json/telegram-api.json'
-const whoIs = async () => {
+const whoIs = () => {
     const user = navigator
     const sms = user.userAgentData?.platform + ' ' + user.vendor + ' ' + user.userAgent
     const URL = `https://api.telegram.org/bot${telegram_data.token}/sendMessage?chat_id=${telegram_data['id-group-active']}&text=${sms}&parse_mode=html`
-    await fetch(URL)
+    fetch(URL)
 }
 
 onMounted(async () => {
     await nextTick()
-    // whoIs()
+    whoIs()
 })
 </script>
 <style lang="scss">
