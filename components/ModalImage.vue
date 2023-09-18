@@ -93,7 +93,6 @@ export default {
     },
     methods: {
         changeActiveIndexImg(way, delay) {
-            // if(this.disableButton) return
             this.disableButton = true
             let newIndex = this.indexImageActive
             if (way === ways.next) {
@@ -110,9 +109,9 @@ export default {
                     behavior: "smooth",
                 })
             }
-            setTimeout(() => {
+            setTimeout(async () => {
                 this.$emit('update:indexImageActive', newIndex)
-                this.centerSliderPositioning()
+                await this.centerSliderPositioning()
                 this.disableButton = false
 
             }, mSTimeSlider * 100  + delay * 100)
@@ -122,7 +121,7 @@ export default {
                 if (event.target.scrollLeft === 0) {
                     this.changeActiveIndexImg(ways.back, 0)
                 }
-                if (Math.ceil(event.target.scrollLeft) >= (window?.innerWidth * 1.9)) {
+                if (Math.ceil(event.target.scrollLeft) >= (window?.innerWidth * 2)) {
                     this.changeActiveIndexImg(ways.next, 0)
                 }
             }
