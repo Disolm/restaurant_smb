@@ -12,17 +12,17 @@
     "vue": "latest"
   },
   "devDependencies": {
-    "@nuxt/devtools": "^0.8.2",
+    "@nuxt/devtools": "0.8.2",
     "@types/node": "^18.17.3",
-    "nuxt": "^3.6.5",
-    "sass": "^1.65.1",
-    "sass-loader": "^13.3.2",
-    "vue-tsc": "^1.8.8"
+    "nuxt": "3.6.5",
+    "sass": "1.65.1",
+    "sass-loader": "13.3.2",
+    "vue-tsc": "1.8.8"
   },
   "dependencies": {
-    "@nuxt-alt/proxy": "^2.3.0",
-    "@pinia/nuxt": "^0.4.11",
-    "klona": "^2.0.6",
-    "pinia": "^2.1.6"
+    "@nuxt-alt/proxy": "2.3.0",
+    "@pinia/nuxt": "0.4.11",
+    "klona": "2.0.6",
+    "pinia": "2.1.6"
   }
 }
