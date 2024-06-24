@@ -14,9 +14,17 @@ const props = defineProps({
         required: false,
         default: 'row'
     },
+  justifyContent: {
+        type: String,
+        required: false,
+        default: 'space-evenly'
+    },
 })
 const directionBine = computed(() => {
     return props.direction
+})
+const justifyContentBine = computed(() => {
+    return props.justifyContent
 })
 </script>
 
@@ -24,7 +32,7 @@ const directionBine = computed(() => {
 .ui-button-group {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: v-bind(justifyContentBine);
     flex-direction: v-bind(directionBine);
 }
 

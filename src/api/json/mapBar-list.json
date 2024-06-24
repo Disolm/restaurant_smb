@@ -9,35 +9,35 @@
         "id": 0,
         "title": "Мукузани",
         "weight": [750],
-        "price": [3100],
+        "price": [3300],
         "description": "красное сухое «Братья Асканели»"
       },
       {
         "id": 1,
         "title": "Саперави",
         "weight": [750],
-        "price": [2400],
+        "price": [2800],
         "description": "красное сухое «Братья Асканели»"
       },
       {
         "id": 2,
         "title": "Киндзмараули",
         "weight": [750],
-        "price": [2800],
+        "price": [3100],
         "description": "красное полусладкое «Братья Асканели»"
       },
       {
         "id": 3,
         "title": "Гранатовое",
         "weight": [150, 750],
-        "price": [330, 1900],
+        "price": [450, 2100],
         "description": "армянское красное вино, полусладкое"
       },
       {
         "id": 4,
         "title": "Ежевичное",
         "weight": [150, 750],
-        "price": [330, 1900],
+        "price": [450, 2100],
         "description": ""
       }
     ]
@@ -52,28 +52,28 @@
         "id": 0,
         "title": "Манави",
         "weight": [750],
-        "price": [2700],
+        "price": [3000],
         "description": "белое сухое «Братья Асканели»"
       },
       {
         "id": 1,
         "title": "Ркацители Квеври",
         "weight": [750],
-        "price": [2350],
+        "price": [2500],
         "description": "белое сухое «Братья Асканели»"
       },
       {
         "id": 2,
         "title": "Цинандали",
         "weight": [750],
-        "price": [2350],
+        "price": [2700],
         "description": "белое сухое «Братья Асканели»"
       },
       {
         "id": 3,
         "title": "Алазанская долина",
         "weight": [750],
-        "price": [2300],
+        "price": [2600],
         "description": "белое полусладкое «Братья Асканели»"
       }
     ]
@@ -88,14 +88,14 @@
       "id": 0,
       "title": "Красное ",
       "weight": [150, 500, 1000],
-      "price": [370, 850, 1700],
+      "price": [390, 950, 1900],
       "description": "сухое/полусладкое"
       },
       {
         "id": 1,
         "title": "Белое",
         "weight": [150, 500, 1000],
-        "price": [370, 850, 1700],
+        "price": [390, 950, 1900],
         "description": "сухое"
       }
     ]
@@ -107,18 +107,11 @@
     "type": "Игристое",
     "set": [{
       "id": 0,
-      "title": "Барон Де Ре",
+      "title": "Chateau de la mer",
       "weight": [750],
-      "price": [2100],
+      "price": [2500],
       "description": "белое полусладкое"
-    },
-      {
-        "id": 1,
-        "title": "Барон Де Ре",
-        "weight": [750],
-        "price": [2100],
-        "description": "белое брют"
-      }
+    }
     ]
   },
   {
@@ -130,14 +123,14 @@
       "id": 0,
       "title": "Асканели",
       "weight": [50, 500],
-      "price": [320, 3150],
+      "price": [350, 3200],
       "description": "пятилетней выдержки"
     },
       {
         "id": 1,
         "title": "Баадури",
         "weight": [50, 500],
-        "price": [290, 2900],
+        "price": [350, 3100],
         "description": "пятилетней выдержки"
       }
     ]
@@ -152,7 +145,7 @@
       "id": 0,
       "title": "MAC INGAL",
       "weight": [50, 500],
-      "price": [200, 1800],
+      "price": [340, 2100],
       "description": "армения, трехлетней выдержки"
       }
     ]
@@ -179,12 +172,12 @@
     "type": "Чача",
     "set": [
       {
-      "id": 0,
-      "title": "Асканели Золотая",
-      "weight": [50, 500],
-      "price": [290, 2800],
-      "description": ""
-    },
+        "id": 0,
+        "title": "Асканели Золотая",
+        "weight": [50, 500],
+        "price": [310, 2900],
+       "description": ""
+      },
       {
         "id": 1,
         "title": "Асканели Платиновая",
@@ -232,21 +225,21 @@
         "id": 4,
         "title": "Сваяк.Стандарт",
         "weight": [50, 500],
-        "price": [160, 1500],
+        "price": [230, 1700],
         "description": ""
       },
       {
         "id": 5,
         "title": "Хлебная",
         "weight": [50, 500],
-        "price": [160, 1500],
+        "price": [230, 1700],
         "description": ""
       },
       {
         "id": 6,
         "title": "Чайковский",
         "weight": [50, 500],
-        "price": [180, 1700],
+        "price": [250, 2100],
         "description": ""
       }
     ]
@@ -255,68 +248,98 @@
     "id": 9,
     "isShow": false,
     "dimension": "мл",
+    "type": "Пиво",
+    "set": [
+      {
+        "id": 0,
+        "title": "Грузинское пиво",
+        "weight": [500],
+        "price": [450],
+        "description": ""
+      },
+      {
+        "id": 0,
+        "title": "Безалкогольное пиво",
+        "weight": [500],
+        "price": [220],
+        "description": ""
+      },
+      {
+        "id": 0,
+        "title": "Светлое пиво",
+        "weight": [500],
+        "price": [350],
+        "description": ""
+      }
+    ]
+  },
+
+  {
+    "id": 10,
+    "isShow": false,
+    "dimension": "мл",
     "type": "Алкогольные коктейли",
     "set": [
       {
       "id": 0,
       "title": "Мегобари",
-      "weight": [],
+      "weight": [500],
       "price": [450],
       "description": "на основе красного вина и водки"
       },
       {
         "id": 1,
         "title": "Чача раз, два, три!",
-        "weight": [],
+        "weight": [500],
         "price": [420],
         "description": "на основе чачи"
       },
       {
         "id": 2,
         "title": "Лазури",
-        "weight": [],
+        "weight": [500],
         "price": [420],
         "description": "на основе текилы"
       },
       {
         "id": 3,
         "title": "Ночной Кутаиси ",
-        "weight": [],
+        "weight": [500],
         "price": [420],
         "description": "на основе коньяка"
       },
       {
         "id": 4,
         "title": "Мохито",
-        "weight": [],
+        "weight": [500],
         "price": [400],
         "description": "на основе рома"
       },
       {
         "id": 5,
         "title": "Апероль Шприц",
-        "weight": [],
+        "weight": [500],
         "price": [470],
         "description": "ликер апероль, игристое, содовая"
       },
       {
         "id": 6,
         "title": "Риони",
-        "weight": [],
+        "weight": [420],
         "price": [420],
         "description": "на основе апероля и водки"
       },
       {
         "id": 7,
         "title": "Батуми",
-        "weight": [],
+        "weight": [500],
         "price": [400],
         "description": "на основе водки"
       },
       {
         "id": 8,
         "title": "Утро в Кутаиси",
-        "weight": [],
+        "weight": [500],
         "price": [420],
         "description": "на основе рома"
       },
@@ -330,7 +353,7 @@
     ]
   },
   {
-    "id": 10,
+    "id": 11,
     "isShow": false,
     "dimension": "мл",
     "type": "Домашние лимонады",
@@ -365,14 +388,14 @@
       },
       {
         "id": 4,
-        "title": "Тархун",
+        "title": "Лимонад с грузинским акцентом",
         "weight": [500, 1000],
         "price": [300, 600],
         "description": ""
       },
       {
         "id": 5,
-        "title": "Лимонад с грузинским акцентом",
+        "title": "Тархун",
         "weight": [500, 1000],
         "price": [300, 600],
         "description": ""
@@ -380,7 +403,7 @@
     ]
   },
   {
-    "id": 11,
+    "id": 12,
     "isShow": false,
     "dimension": "мл",
     "type": "Милкшейк",
@@ -409,7 +432,7 @@
     ]
   },
   {
-    "id": 12,
+    "id": 13,
     "isShow": false,
     "dimension": "мл",
     "type": "Напитки",
@@ -418,21 +441,21 @@
       "id": 0,
       "title": "Грузинский лимонад",
       "weight": [500],
-      "price": [245],
-      "description": ""
+      "price": [260],
+      "description": "«Натахтари» вкусы в ассортименте"
       },
       {
         "id": 1,
         "title": "Кола",
         "weight": [330],
-        "price": [170],
+        "price": [210],
         "description": ""
       },
       {
         "id": 2,
         "title": "Вода Саирме",
         "weight": [500],
-        "price": [240],
+        "price": [250],
         "description": "с газом / без газа"
       },
       {
@@ -453,71 +476,7 @@
         "id": 5,
         "title": "Морс ягодный",
         "weight": [200, 500, 1000],
-        "price": [90, 225, 450],
-        "description": ""
-      },
-      {
-        "id": 6,
-        "title": "Грузинское пиво",
-        "weight": [500],
-        "price": [320],
-        "description": ""
-      },
-      {
-        "id": 7,
-        "title": "Безалкогольное пиво",
-        "weight": [500],
-        "price": [220],
-        "description": ""
-      }
-    ]
-  },
-  {
-    "id": 13,
-    "isShow": false,
-    "dimension": "мл",
-    "type": "Чай",
-    "set": [
-      {
-        "id": 0,
-        "title": "Чёрный классический",
-        "weight": [],
-        "price": [180],
-        "description": ""
-      },
-      {
-        "id": 1,
-        "title": "Зелёный классический",
-        "weight": [],
-        "price": [180],
-        "description": ""
-      },
-      {
-        "id": 2,
-        "title": "Фирменный гранатовый",
-        "weight": [],
-        "price": [340],
-        "description": ""
-      },
-      {
-        "id": 3,
-        "title": "Имбирный травяной",
-        "weight": [],
-        "price": [330],
-        "description": ""
-      },
-      {
-        "id": 4,
-        "title": "Клюквенный цитрус",
-        "weight": [],
-        "price": [340],
-        "description": ""
-      },
-      {
-        "id": 5,
-        "title": "Облепиховый",
-        "weight": [],
-        "price": [340],
+        "price": [100, 250, 500],
         "description": ""
       }
     ]
@@ -526,41 +485,106 @@
     "id": 14,
     "isShow": false,
     "dimension": "мл",
+    "type": "Чай",
+    "set": [
+      {
+        "id": 0,
+        "title": "Чёрный классический",
+        "weight": [500],
+        "price": [210],
+        "description": ""
+      },
+      {
+        "id": 1,
+        "title": "Зелёный классический",
+        "weight": [500],
+        "price": [210],
+        "description": ""
+      },
+      {
+        "id": 2,
+        "title": "Фирменный гранатовый",
+        "weight": [500],
+        "price": [370],
+        "description": ""
+      },
+      {
+        "id": 3,
+        "title": "Имбирный травяной",
+        "weight": [500],
+        "price": [340],
+        "description": ""
+      },
+      {
+        "id": 4,
+        "title": "Клюквенный цитрус",
+        "weight": [500],
+        "price": [350],
+        "description": ""
+      },
+      {
+        "id": 5,
+        "title": "Облепиховый",
+        "weight": [500],
+        "price": [350],
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "isShow": false,
+    "dimension": "мл",
     "type": "Кофе",
     "set": [
       {
         "id": 0,
         "title": "Американо",
-        "weight": [],
-        "price": [140],
+        "weight": [250],
+        "price": [160],
         "description": ""
       },
       {
         "id": 1,
         "title": "Эспрессо",
-        "weight": [],
-        "price": [140],
+        "weight": [50],
+        "price": [160],
         "description": ""
       },
       {
         "id": 2,
         "title": "Капучино",
         "weight": [250],
-        "price": [180],
+        "price": [200],
         "description": ""
       },
       {
         "id": 3,
         "title": "Латте",
         "weight": [250],
-        "price": [180],
+        "price": [200],
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "isShow": false,
+    "dimension": "гр",
+    "type": "Добавки",
+    "set": [
+      {
+        "id": 0,
+        "title": "Мёд натуральный",
+        "weight": [50],
+        "price": [90],
         "description": ""
       },
       {
-        "id": 4,
-        "title": "Горячий шоколад",
-        "weight": [250],
-        "price": [180],
+        "id": 1,
+        "title": "Лимон",
+        "weight": [50],
+        "price": [60],
         "description": ""
       }
     ]

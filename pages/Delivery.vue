@@ -49,7 +49,6 @@ onMounted(async () => {
     flex-direction: column;
     align-items: stretch;
     justify-content: flex-start;
-    position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url("/image/background/background-delivery.jpg") no-repeat center;
     background-size: cover;
 

@@ -12,7 +12,8 @@
                     class="menu-list__section-name"
                     :style="{background: `url('${backgroundUrl}')`}"
                 >
-                    {{ section.type.toUpperCase() }}
+                  <span class="menu-list__section-name__name">{{ section.type.toUpperCase() }}</span>
+                  <span v-if="section.description" class="menu-list__section-name__description" >{{ section.description.toLocaleLowerCase() }}</span>
                 </div>
                 <Transition name="fade">
                     <div
@@ -56,7 +57,7 @@
                                             v-if="!!dish.description"
                                             class="menu-list__dish-description"
                                         >
-                                            {{ dish.description }}
+                                            {{ dish.description.toLocaleLowerCase() }}
                                         </div>
                                     </div>
                                 </div>
@@ -78,39 +79,6 @@
                                             <span v-if="idxP + 1 < dish.weight.length">/</span>
                                         </div>
                                     </div>
-                                    <Transition name="fade">
-                                        <ChangeCart
-                                            v-if="isShowChangeCart"
-                                            :item-in-cart="itemInCart"
-                                            :dish="dish"
-                                            :section="section"
-                                            :name-file-menu="nameFileMenu"
-                                            :menu-list="menuList"
-                                        />
-                                        <!--                                        <div v-if="isShowChangeCart"-->
-                                        <!--                                             class="menu-list__change-cart-wrapper"-->
-                                        <!--                                        >-->
-                                        <!--                                            <img-->
-                                        <!--                                                class="menu-list__change-cart-img"-->
-                                        <!--                                                :class="{'menu-list__change-cart-img_disable': itemInCart[section.id][dish.id][0] === MIN_ITEM_IN_CART}"-->
-                                        <!--                                                src="/image/icon/decrease.svg"-->
-                                        <!--                                                alt="-"-->
-                                        <!--                                                title="-"-->
-                                        <!--                                                @click="changeItemInCart(section.id, dish.id, -1, itemInCart[section.id][dish.id][1])"-->
-                                        <!--                                            >-->
-                                        <!--                                            <div class="menu-list__change-cart-input">-->
-                                        <!--                                                {{ itemInCart[section.id][dish.id][0] }}-->
-                                        <!--                                            </div>-->
-                                        <!--                                            <img-->
-                                        <!--                                                class="menu-list__change-cart-img"-->
-                                        <!--                                                :class="{'menu-list__change-cart-img_disable': itemInCart[section.id][dish.id][0] === MAX_ITEM_IN_CART}"-->
-                                        <!--                                                src="/image/icon/increase.svg"-->
-                                        <!--                                                alt="+"-->
-                                        <!--                                                title="+"-->
-                                        <!--                                                @click="changeItemInCart(section.id, dish.id, +1, itemInCart[section.id][dish.id][1])"-->
-                                        <!--                                            >-->
-                                        <!--                                        </div>-->
-                                    </Transition>
                                 </div>
                             </div>
                         </div>
@@ -195,11 +163,18 @@ export default defineNuxtComponent({
         @media screen and (min-width: $width-mobile) {
             top: calc($height-header-navbar-desktop - 1px);
         }
-        text-decoration: underline;
         font-weight: bold;
         letter-spacing: 0.05rem;
         text-align: center;
         z-index: 1;
+      &__name {
+        text-decoration: underline;
+      }
+      &__description{
+        margin: 10px;
+        text-decoration: none;
+        font-size: 12px
+      }
     }
 
     &__dish {

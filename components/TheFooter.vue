@@ -67,7 +67,7 @@ const outputOfWorkSchedule = (subType) => {
 .footer {
     width: 100%;
     height: $height-footer;
-    //z-index: 10;
+    z-index: 10;
 
     &__wrapper {
         width: 100%;

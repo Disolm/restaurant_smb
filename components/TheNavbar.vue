@@ -210,9 +210,8 @@ export default {
 
     &__pageup {
         position: fixed;
-        bottom: 40px;
+        bottom: 50px;
         right: 40px;
-        z-index: 150;
         //animation: pageup 1s;
         opacity: 1;
         transition: opacity .3s ease-in-out;
