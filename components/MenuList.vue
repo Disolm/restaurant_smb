@@ -91,8 +91,6 @@
 
 <script>
 import contentJson from '/src/api/json/content.json'
-import {useCartStore} from '~/stores/cart'
-
 
 export default defineNuxtComponent({
     name: 'MenuList',
@@ -121,7 +119,6 @@ export default defineNuxtComponent({
     },
     data() {
         return {
-            store: useCartStore(),
             content: contentJson,
             isShowChangeCart: true,
             itemInCart: {},
@@ -130,9 +127,6 @@ export default defineNuxtComponent({
             MIN_ITEM_IN_CART: 0,
         }
     },
-    mounted() {
-        this.isShowChangeCart = this.store.isShowCart
-    }
 })
 </script>
 
@@ -159,14 +153,15 @@ export default defineNuxtComponent({
         padding: 6px 0;
         margin: 0 auto;
         position: sticky;
-        top: calc($height-header-navbar-mobile - 1px);
-        @media screen and (min-width: $width-mobile) {
-            top: calc($height-header-navbar-desktop - 1px);
-        }
         font-weight: bold;
         letter-spacing: 0.05rem;
         text-align: center;
         z-index: 1;
+        top: calc($height-header-navbar-mobile - 1px);
+        @media screen and (min-width: $width-mobile) {
+            top: calc($height-header-navbar-desktop - 1px);
+        }
+
       &__name {
         text-decoration: underline;
       }

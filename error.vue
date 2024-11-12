@@ -1,17 +1,17 @@
 <template>
-    <div class="error-page">
-        <div class="error-page__title">
-            <h1>Status code: {{ error.statusCode }}</h1>
-            <h2>Message: {{ error.message }}</h2>
-            <h3>Это всего лишь ошибка на сайте, ресторан по прежнему работаем.</h3>
-        </div>
-        <nuxt-link
-                class="error-page__link"
-                to="/"
-        >
-            Вернуться на главную страницу
-        </nuxt-link>
+  <div class="error-page">
+    <div class="error-page__title">
+      <h1>Status code: {{ error.statusCode }}</h1>
+      <h2>Message: {{ error.message }}</h2>
+      <h3>Это всего лишь ошибка на сайте, ресторан по прежнему работаем.</h3>
     </div>
+    <nuxt-link
+        class="error-page__link"
+        to="/"
+    >
+      Вернуться на главную страницу
+    </nuxt-link>
+  </div>
 </template>
 
 <script setup>
@@ -28,9 +28,9 @@ defineProps(['error'])
   //margin-top: 0;
 
   &__title {
-    @include padding-top-main;
     //margin: 42px;
     padding-bottom: 32px;
+    @include padding-top-main;
 
   }
 

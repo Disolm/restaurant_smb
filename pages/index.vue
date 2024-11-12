@@ -299,15 +299,9 @@ const handleScroll = (evt, el, type) => {
     }
 
     &__top {
-        @include padding-top-main;
+
         background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("/image/background/background-index-small.jpg") no-repeat center;
         background-size: cover;
-        min-height: calc(100vh - $height-header-mobile);
-        @media screen and (min-width: $width-mobile) {
-            min-height: calc(100vh - $height-header-desktop);
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("/image/background/background-index-big.jpg") no-repeat center;
-            background-size: cover;
-        }
         width: 100%;
         height: 100vh;
         display: flex;
@@ -315,6 +309,13 @@ const handleScroll = (evt, el, type) => {
         align-items: stretch;
         justify-content: flex-start;
         position: relative;
+        min-height: calc(100vh - $height-header-mobile);
+        @media screen and (min-width: $width-mobile) {
+            min-height: calc(100vh - $height-header-desktop);
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("/image/background/background-index-big.jpg") no-repeat center;
+            background-size: cover;
+        }
+        @include padding-top-main;
     }
 
     &__info {

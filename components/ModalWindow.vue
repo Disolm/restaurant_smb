@@ -130,16 +130,15 @@ const closedReserveTable = () => {
     &__content {
         position: static;
         padding: 0 16px 22px;
-        @media screen and (min-width: $width-tablet) {
-            padding: 0 32px 42px;
-        }
-
         display: inline-flex;
         flex-wrap: nowrap;
         justify-content: center;
         flex-direction: column;
         align-items: center;
         grid-gap: 16px;
+        @media screen and (min-width: $width-tablet) {
+            padding: 0 32px 42px;
+        }
     }
 
 }
