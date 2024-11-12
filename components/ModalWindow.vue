@@ -1,6 +1,9 @@
 <template>
     <div class="modal-window">
-        <div class="modal-window__overlay">
+        <div
+            class="modal-window__overlay"
+            :class="{'modal-window__overlay_scroll': scroll}"
+        >
 
             <div
                 class="modal-window__content-wrapper"
@@ -17,15 +20,18 @@
                 <div
                     class="modal-window__content"
                 >
-                    <UiTitle>
+                    <UiTitle v-if="title">
                         <h3 class="modal-window__title">
-                            {{ content.index.reserveTable.title }}
+                            {{ title }}
                         </h3>
                     </UiTitle>
-                    <UiTitle>
+                    <UiTitle v-if="description">
                         <h5 class="modal-window__description">
-                            {{ content.index.reserveTable.content }}
+                            {{ description }}
                         </h5>
+                    </UiTitle>
+                    <UiTitle>
+                        <slot/>
                     </UiTitle>
                     <UiLink
                         tag="a"
@@ -46,12 +52,22 @@
 const props = defineProps({
     content: {
         type: Object
+    },
+    title: {
+        type: String
+    },
+     description: {
+        type: String
+    },
+    scroll: {
+        type: Boolean
     }
 })
 const emits = defineEmits([
     'isShowReserveTable'
 ])
 const closedReserveTable = () => {
+    document.body.style.overflow = '';
     emits('isShowReserveTable', false)
 }
 </script>
@@ -71,10 +87,9 @@ const closedReserveTable = () => {
         position: relative;
         top: 0;
         right: 0;
-        display: inline;
-        float: right;
+        display: flex;
+        justify-content: flex-end;
         padding: 4px;
-        //margin: -22px -32px 0 auto;
         border: 1px solid rgba(0, 0, 0, 0);
 
         &:hover, &:active {
@@ -109,10 +124,10 @@ const closedReserveTable = () => {
         right: 0;
         left: 0;
         bottom: 0;
-        background: rgba($black, 0.8);
-        &:active {
-            background: rgba($black, 0.9);
-        }
+        background: rgba($black, 0.9);
+      &_scroll {
+        overflow-y: scroll;
+      }
     }
     &__content-wrapper {
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -120,6 +135,10 @@ const closedReserveTable = () => {
         color: $turquoise;
         letter-spacing: 0.8px;
         border: 1px solid $turquoise;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-end;
+        align-items: flex-end;
         max-width: 100vw;
         margin: $height-header-mobile auto;
         @media screen and (min-width: $width-tablet) {

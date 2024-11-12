@@ -22,6 +22,7 @@ const clickButtons = (event) => {
         })
 
         setTimeout(() => {
+            document.body.style.overflow = 'hidden';
             isShowReserveTable.value = true
         }, 150)
     }
@@ -105,6 +106,8 @@ const handleScroll = (evt, el, type) => {
                     key="reserve-table"
                     @isShowReserveTable="isShowReserveTable = $event"
                     :content="content"
+                    :title="content.index.reserveTable.title"
+                    :description="content.index.reserveTable.content"
                 />
             </Transition>
         </div>
@@ -126,7 +129,7 @@ const handleScroll = (evt, el, type) => {
                 </h5>
             </UiTitle>
         </div>
-        <BannerOnIndexPage/>
+        <BannerOnIndexPage :content="content"/>
         <div class="index__gallery-container">
             <UiPicture
                 v-for="picture in getPictures()"
