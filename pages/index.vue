@@ -129,7 +129,8 @@ const handleScroll = (evt, el, type) => {
                 </h5>
             </UiTitle>
         </div>
-        <BannerOnIndexPage :content="content"/>
+        <BannerBirthdayOnIndexPage :content="content"/>
+        <BannerNewYearOnIndexPage :content="content"/>
         <div class="index__gallery-container">
             <UiPicture
                 v-for="picture in getPictures()"
@@ -313,12 +314,12 @@ const handleScroll = (evt, el, type) => {
         justify-content: flex-start;
         position: relative;
         min-height: calc(100vh - $height-header-mobile);
+        @include padding-top-main;
         @media screen and (min-width: $width-mobile) {
             min-height: calc(100vh - $height-header-desktop);
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)), url("/image/background/background-index-big.jpg") no-repeat center;
             background-size: cover;
         }
-        @include padding-top-main;
     }
 
     &__info {
